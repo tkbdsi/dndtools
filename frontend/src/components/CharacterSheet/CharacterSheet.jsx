@@ -11,6 +11,13 @@ const CharacterSheet = () => {
   const [alignment, setAlignment] = useState("");
   const [exp, setExp] = useState(0);
 
+  const [strScore, setStrcore] = useState(10);
+  const [dexScore, setDexScore] = useState(10);
+  const [conScore, setConScore] = useState(10);
+  const [intScore, setIntScore] = useState(10);
+  const [wisScore, setWisScore] = useState(10);
+  const [chaScore, setChaScore] = useState(10);
+
   return (
     <main className="container">
         <section>
@@ -38,6 +45,20 @@ const CharacterSheet = () => {
 
           <label className="label">Experience Points</label>
           <input className="input" type="number" value={exp} min={0} name="exp" onChange={(e) => setExp(e.target.value)}/>
+        </section>
+        <section>
+          <label className="label" htmlFor="strScore">Strength</label>
+          <input className="input" type="number" value={strScore} name="strScore" />
+          <label className="label" htmlFor="dexScore">Dexterity</label>
+          <input className="input" type="number" value={dexScore} name="dexScore" />
+          <label className="label" htmlFor="conScore">Constitution</label>
+          <input className="input" type="number" value={conScore} name="conScore" />
+          <label className="label" htmlFor="intScore">Intelligence</label>
+          <input className="input" type="number" value={intScore} name="intScore" />
+          <label className="label" htmlFor="wisScore">Wisdom</label>
+          <input className="input" type="number" value={wisScore} name="wisScore" />
+          <label className="label" htmlFor="chaScore">Charisma</label>
+          <input className="input" type="number" value={chaScore} name="chaScore" />
         </section>
     </main>
   )
