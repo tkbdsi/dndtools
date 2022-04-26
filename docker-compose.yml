@@ -3,9 +3,9 @@ version: "3.8"
 services:
   frontend:
     container_name: frontend
-    build: ./frontend
+    build: ./vite_frontend
     volumes:
-      - "./frontend:/app"
+      - "./vite_frontend:/app"
     ports:
       - "3000:3000"
     networks:
